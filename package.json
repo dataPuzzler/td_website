@@ -14,6 +14,7 @@
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "dev": "npm-run-all --parallel start watch",
-    "start": "serve docs"
+    "start": "serve docs",
+    "clean": "cd docs && rm -rf *"
   }
 }

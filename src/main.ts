@@ -3,7 +3,7 @@ import { makeDate } from "./utils";
 
 const body =  document.getElementsByTagName("body")[0]
 const displaySpan = document.createElement("span")
-displaySpan.textContent = makeDate(5, 5, 5).toDateString()
+displaySpan.textContent = makeDate(1438, 5, 5).toDateString()
 body.appendChild(displaySpan)
 
 // even though Rollup is bundling all your files together, errors and
