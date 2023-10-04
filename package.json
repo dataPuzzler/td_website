@@ -11,10 +11,12 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "build": "rollup -c",
     "watch": "rollup -c -w",
     "dev": "npm-run-all --parallel start watch",
-    "start": "serve docs",
-    "clean": "cd docs && rm -rf *"
+    "start": "serve dev",
+    "clean:dev": "cd dev/module && rm -rf *",
+    "build:prd": "NODE_ENV=prd rollup -c && cd ./dev && mv *.html ../docs ",
+    "build:dev": "NODE_ENV=dev rollup -c",
+    "cool:dev": "NODE_ENV=dev node ./cool.js --foo-bar=baz"
   }
 }
