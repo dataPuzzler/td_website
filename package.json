@@ -1,22 +1,19 @@
 {
-  "name": "td_website",
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.1",
-    "@rollup/plugin-terser": "^0.4.3",
-    "@rollup/plugin-typescript": "^11.1.4",
-    "npm-run-all": "^4.1.5",
-    "rollup": "^3.29.4",
-    "serve": "^14.2.1",
-    "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "vitepress": "^1.2.3",
+	"@tailwindcss/typography": "^0.5.10",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^20.11.27",
+    "feed": "^4.2.2",
+    "gray-matter": "^4.0.3",
+    "tailwindcss": "^3.4.1",
+    "vue": "^3.4.21"
   },
   "scripts": {
-    "watch": "rollup -c -w",
-    "dev": "npm-run-all --parallel start watch",
-    "start": "serve dev",
-    "clean:dev": "cd dev/module && rm -rf *",
-    "build:prd": "NODE_ENV=prd rollup -c && cd ./dev && mv *.html ../docs ",
-    "build:dev": "NODE_ENV=dev rollup -c",
-    "cool:dev": "NODE_ENV=dev node ./cool.js --foo-bar=baz"
-  }
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+	"serve": "vitepress serve"
+  },
+  "type": "module"
 }
