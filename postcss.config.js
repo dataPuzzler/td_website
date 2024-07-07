@@ -4,7 +4,7 @@ import tailwindTypography from '@tailwindcss/typography'
 export default {
   plugins: [
     tailwind({
-      content: ['.vitepress/theme/**/*.vue'],
+      content: ['.vitepress/theme/**/*.vue', 'articles/*.md'],
       plugins: [tailwindTypography]
     })
   ]
